@@ -10,7 +10,15 @@ class LoginDialog : public QDialog
     Q_OBJECT //使用信号和槽等特性必须添加该宏
 public:
     explicit LoginDialog(QWidget *parent = 0);
-    LoginDialog();
+    ~LoginDialog();
+
+    private:
+    QLabel *usrLabel;
+    QLabel *pwdLabel;
+    QLineEdit *usrLineEdit;
+    QLineEdit *pwdLineEdit;
+    QPushButton *loginBtn;
+    QPushButton *exitBtn;
 };
 
 #endif // LOGINDIALOG_H
