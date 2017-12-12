@@ -19,6 +19,8 @@ public:
     QLineEdit *pwdLineEdit;
     QPushButton *loginBtn;
     QPushButton *exitBtn;
+private slots:
+    void login();
 };
 
 #endif // LOGINDIALOG_H

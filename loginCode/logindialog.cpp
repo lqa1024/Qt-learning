@@ -27,8 +27,30 @@ LoginDialog::LoginDialog(QWidget *parent):
     exitBtn=new QPushButton(this);
     exitBtn->move(210,200);
     exitBtn->setText(tr("退出"));
-}
+
+    connect(loginBtn,&QPushButton::clicked,this,&LoginDialog::login);
+    connect(exitBtn,&QPushButton::clicked,this,&LoginDialog::close);
+    }
+
 LoginDialog::~LoginDialog()
 {
 
 }
+void LoginDialog::login()
+{
+    //判断用户名和密码是否正确
+    //如果错误则弹出警告对话框
+    if(usrLineEdit->text().trimmed()==tr("lqa")&&pwdLineEdit->text()==tr("123456"))
+    {
+        accept();
+    }
+    else
+    {
+        QMessageBox::warning(this,tr("警告"),tr("用户名或密码错误"),QMessageBox::Yes);
+    }
+    //清空内容并定位光标
+    usrLineEdit->clear();
+    pwdLineEdit->clear();
+    usrLineEdit->setFocus();
+}
+
