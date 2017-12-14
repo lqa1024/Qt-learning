@@ -27,7 +27,7 @@
     <property name="title">
      <string>文件(&amp;F)</string>
     </property>
-    <addaction name="action_N"/>
+    <addaction name="action_N_2"/>
    </widget>
    <addaction name="menu_F"/>
   </widget>
@@ -40,16 +40,19 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action_N">
+  <action name="action_N_2">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/filenew.png</normaloff>:/images/filenew.png</iconset>
+   </property>
    <property name="text">
     <string>新建(&amp;N)</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+N</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
